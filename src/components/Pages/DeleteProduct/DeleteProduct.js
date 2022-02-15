@@ -6,7 +6,7 @@ import './DeleteProduct.css'
 const DeleteProduct = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://young-ravine-53752.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
@@ -15,7 +15,7 @@ const DeleteProduct = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://young-ravine-53752.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

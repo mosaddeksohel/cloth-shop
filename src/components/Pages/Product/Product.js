@@ -5,27 +5,28 @@ import { Button, Card, Container } from 'react-bootstrap';
 const Product = ({ product }) => {
     const { title, design, price, image } = product;
     return (
-        <>
-            <div>
 
-                <Container class className='product'>
-                    <Card style={{ width: '8rem' }}>
-                        <Card.Img style={{ height: '250px' }} variant="top" src={image} />
-                        <Card.Body>
-                            <div>
-                                <Card.Title>{title}</Card.Title>
-                                <Card.Text style={{ textAlign: 'justify' }}>
-                                    <h5>Design By: {design}</h5>
-                                    <h5>Price: ${price}</h5>
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </div>
-                        </Card.Body>
-                    </Card>
-                </Container>
+        <Container className='mx-auto'>
+            <h2 style={{ color: 'indianred' }}>Manage All Products</h2>
 
+            <div className='item'>
+                {
+                    <div>
+                        <Card style={{ border: 'none', marginTop: '20px' }}>
+                            <Card.Img style={{ height: '230px' }} className="mb-0" variant="top" src={image} />
+                            <Card.Body className='mt-0'>
+                                <Card.Title style={{ height: '50px' }} >{title}</Card.Title>
+                                <Card.Title>Design by: {design}</Card.Title>
+                                <Card.Title>Price: ${price}</Card.Title>
+                                <Button style={{ width: '90%', height: '2rem', borderRadius: '10px', backgroundColor: 'goldenrod' }} className="warning" >Delete</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                }
             </div>
-        </>
+
+        </Container>
+
     );
 };
 
