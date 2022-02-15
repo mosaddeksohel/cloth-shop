@@ -1,12 +1,11 @@
 import './App.css';
-import AddProduct from './components/Pages/AddService/AddProduct';
-import Products from './components/Pages/Products/Products';
+import DeleteProduct from './components/Pages/DeleteProduct/DeleteProduct';
 
 function App() {
   return (
     <div className="App">
 
-      <Products></Products>
+      <DeleteProduct></DeleteProduct>
     </div>
   );
 }
